@@ -276,7 +276,7 @@ export default function App() {
       {/* Header Info */}
       <div className="absolute top-10 left-12 z-50 flex flex-col items-start translate-y-[-10px]">
         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }}>
-          <h1 className="modern-title text-6xl md:text-7xl font-extrabold italic">
+          <h1 className="modern-title text-6xl md:text-7xl font-extrabold">
             HÁI HOA DÂN CHỦ
           </h1>
           <div className="title-accent w-64 mt-3" />
@@ -290,7 +290,7 @@ export default function App() {
             {selectedTeam && (
               <div className="glass-panel px-6 py-2 rounded-full border-emerald-500/30 flex items-center gap-3">
                 <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                <span className="text-xs font-black tracking-widest text-emerald-400 uppercase italic">
+                <span className="text-xs font-black tracking-widest text-emerald-400 uppercase">
                   ĐANG THI: {selectedTeam}
                 </span>
               </div>
@@ -381,13 +381,13 @@ export default function App() {
                         </div>
                       </div>
                       <div className={`absolute -top-4 -right-1 bg-linear-to-b rounded-full w-14 h-14 flex items-center justify-center border-4 shadow-2xl z-30 transition-transform ${isCompleted ? 'from-gray-400 to-gray-600 border-gray-800' : 'from-amber-50 via-amber-400 to-amber-700 border-amber-950/40 group-hover:scale-110'}`}>
-                        <span className={`font-black text-xl italic tracking-tighter ${isCompleted ? 'text-white' : 'text-black'}`}>{flower.id.toString().padStart(2, '0')}</span>
+                        <span className={`font-black text-xl tracking-tighter ${isCompleted ? 'text-white' : 'text-black'}`}>{flower.id.toString().padStart(2, '0')}</span>
                       </div>
                     </div>
                   </div>
                   <div className="mt-6 opacity-0 group-hover:opacity-100 translate-y-6 group-hover:translate-y-0 transition-all duration-700 pointer-events-none">
                     <div className="bg-linear-to-b from-amber-800 via-amber-950 to-black px-12 py-3 rounded-full border-2 border-amber-400/50 shadow-[0_20px_50px_rgba(0,0,0,0.9)] backdrop-blur-xl">
-                      <span className="text-lg font-black text-amber-50 tracking-[0.3em] whitespace-nowrap uppercase italic drop-shadow-md">
+                      <span className="text-lg font-black text-amber-50 tracking-[0.3em] whitespace-nowrap uppercase drop-shadow-md">
                         {flower.name}
                       </span>
                     </div>
@@ -409,7 +409,7 @@ export default function App() {
           <div className={`p-4 rounded-2xl ${selectedTeam ? 'bg-emerald-500/20 text-emerald-400' : 'bg-amber-500/20 text-amber-500'} shadow-inner group-hover:scale-110 transition-transform`}>
             <Users size={32} />
           </div>
-          <span className="text-[10px] font-black tracking-[0.3em] uppercase italic text-center leading-tight">
+          <span className="text-[10px] font-black tracking-[0.3em] uppercase text-center leading-tight">
             {selectedTeam ? 'THÀNH VIÊN ĐANG THI' : 'CHỌN THÀNH VIÊN'}
           </span>
           {selectedTeam && (
@@ -428,7 +428,7 @@ export default function App() {
           <div className="p-4 rounded-2xl bg-amber-500/20 text-amber-500 shadow-inner group-hover:scale-110 transition-transform">
             <Settings size={32} />
           </div>
-          <span className="text-[10px] font-black tracking-[0.3em] uppercase italic text-center leading-tight">
+          <span className="text-[10px] font-black tracking-[0.3em] uppercase text-center leading-tight">
             CHẤM ĐIỂM HÙNG BIỆN
           </span>
         </motion.button>
@@ -440,7 +440,7 @@ export default function App() {
           <div className="flex items-center justify-between mb-6">
             <div className="flex items-center gap-3">
               <Trophy size={18} className="text-amber-500" />
-              <span className="text-xs font-black tracking-[0.2em] uppercase italic text-amber-200/80">Bảng Xếp Hạng</span>
+              <span className="text-xs font-black tracking-[0.2em] uppercase text-amber-200/80">Bảng Xếp Hạng</span>
             </div>
             <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
           </div>
@@ -454,7 +454,7 @@ export default function App() {
               .map(([name, data], idx) => (
                 <div key={name} className={`flex items-center justify-between p-3 rounded-xl border border-white/5 bg-white/5 group hover:bg-white/10 transition-colors ${idx === 0 ? 'bg-amber-500/10 border-amber-500/20' : ''}`}>
                   <div className="flex items-center gap-3">
-                    <span className={`text-[10px] font-black w-5 h-5 rounded-md flex items-center justify-center italic ${idx === 0 ? 'bg-amber-500 text-black' : 'bg-white/10 text-white/40'}`}>
+                    <span className={`text-[10px] font-black w-5 h-5 rounded-md flex items-center justify-center ${idx === 0 ? 'bg-amber-500 text-black' : 'bg-white/10 text-white/40'}`}>
                       {idx + 1}
                     </span>
                     <div className="flex flex-col">
@@ -462,7 +462,7 @@ export default function App() {
                       <span className="text-[8px] text-white/30 font-black uppercase tracking-widest">{data.time}s</span>
                     </div>
                   </div>
-                  <span className="text-xs font-black italic text-amber-400">{data.points} đ</span>
+                  <span className="text-xs font-black text-amber-400">{data.points} đ</span>
                 </div>
               ))}
           </div>
@@ -518,12 +518,12 @@ export default function App() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                   >
-                    <h2 className="text-7xl font-black text-amber-950 mb-6 uppercase tracking-tight italic">
+                    <h2 className="text-7xl font-black text-amber-950 mb-6 uppercase tracking-tight">
                       {selectedFlower.name}
                     </h2>
                     <div className="flex items-center justify-center gap-4 mb-10">
                       <div className="h-px w-12 bg-amber-200" />
-                      <p className="text-amber-800/60 text-xl font-bold tracking-[0.2em] uppercase italic">
+                      <p className="text-amber-800/60 text-xl font-bold tracking-[0.2em] uppercase">
                         Bộ câu hỏi dành cho {selectedTeam}
                       </p>
                       <div className="h-px w-12 bg-amber-200" />
@@ -557,9 +557,8 @@ export default function App() {
                       <div>
                         <div className="flex items-center gap-3 mb-1">
                           <div className="w-2 h-2 rounded-full bg-red-600 animate-pulse" />
-                          <span className="text-amber-700 font-black text-xs tracking-[0.4em] uppercase opacity-60">PHẦN THI TRỰC TUYẾN</span>
                         </div>
-                        <h4 className="text-4xl font-black italic text-amber-950 leading-none">
+                        <h4 className="text-4xl font-black text-amber-950 leading-none">
                           {quizStep === 'quiz' ? (
                             <>CÂU TRẮC NGHIỆM <span className="text-amber-600">0{currentQuestionIndex + 1}</span></>
                           ) : quizStep === 'summary' ? (
@@ -595,8 +594,8 @@ export default function App() {
                         <div className="space-y-16 flex-1 flex flex-col justify-center">
                           {/* Question Text */}
                           <div className="relative">
-                            <div className="absolute -left-6 -top-6 text-9xl opacity-5 text-amber-500 font-black italic select-none">Q</div>
-                            <p className="text-5xl font-black text-amber-950 leading-[1.2] italic tracking-tight drop-shadow-sm">
+                            <div className="absolute -left-6 -top-6 text-9xl opacity-5 text-amber-500 font-black select-none">Q</div>
+                            <p className="text-5xl font-black text-amber-950 leading-[1.2] tracking-tight drop-shadow-sm">
                               {questionsDb[selectedFlower.id].mcqs[currentQuestionIndex].q}
                             </p>
                           </div>
@@ -612,7 +611,7 @@ export default function App() {
                                   : 'bg-white border-amber-100 hover:border-amber-300 hover:bg-amber-50/50 hover:shadow-xl'
                                   }`}
                               >
-                                <div className={`w-16 h-16 min-w-[4rem] rounded-2xl flex items-center justify-center font-black italic border-2 transition-all text-3xl ${selectedAnswer === i
+                                <div className={`w-16 h-16 min-w-[4rem] rounded-2xl flex items-center justify-center font-black border-2 transition-all text-3xl ${selectedAnswer === i
                                   ? 'bg-white border-amber-300 text-amber-950 scale-110'
                                   : 'bg-amber-50 border-amber-100 text-amber-600 group-hover:bg-amber-100'
                                   }`}>
@@ -635,12 +634,12 @@ export default function App() {
                           >
                             <div className="inline-block p-1 bg-linear-to-b from-amber-400 to-amber-600 rounded-[3rem] shadow-2xl mb-10">
                               <div className="bg-white px-20 py-12 rounded-[2.8rem] flex flex-col items-center">
-                                <span className="text-amber-800/40 font-black text-sm tracking-[0.5em] uppercase mb-4 italic">Điểm số trắc nghiệm</span>
+                                <span className="text-amber-800/40 font-black text-sm tracking-[0.5em] uppercase mb-4">Điểm số trắc nghiệm</span>
                                 <div className="flex items-baseline gap-2">
-                                  <span className="text-[10rem] font-black text-amber-600 leading-none tracking-tighter italic">{calculateScore()}</span>
+                                  <span className="text-[10rem] font-black text-amber-600 leading-none tracking-tighter">{calculateScore()}</span>
                                   <span className="text-5xl font-black text-amber-200">/ {questionsDb[selectedFlower.id].mcqs.length}</span>
                                 </div>
-                                <p className="mt-8 text-2xl font-bold text-amber-950 italic">Chúc mừng {selectedTeam} đã hoàn thành!</p>
+                                <p className="mt-8 text-2xl font-bold text-amber-950">Chúc mừng {selectedTeam} đã hoàn thành!</p>
                               </div>
                             </div>
 
@@ -696,7 +695,7 @@ export default function App() {
                                     {questionsDb[selectedFlower.id].essays.length > 1 && (
                                       <span className="text-[10px] font-black text-amber-200/30 uppercase tracking-[0.4em] block text-center mb-4">CHỦ ĐỀ {idx + 1}</span>
                                     )}
-                                    <p className="text-2xl sm:text-3xl md:text-[2.4rem] font-black text-white leading-tight italic text-center drop-shadow-xl relative z-10 px-4">
+                                    <p className="text-2xl sm:text-3xl md:text-[2.4rem] font-black text-white leading-tight text-center drop-shadow-xl relative z-10 px-4">
                                       "{essay}"
                                     </p>
                                   </div>
@@ -715,7 +714,7 @@ export default function App() {
                                   type="number"
                                   value={essayScoreInput}
                                   onChange={(e) => setEssayScoreInput(e.target.value)}
-                                  className="w-full bg-amber-50 border-2 border-amber-200 rounded-2xl px-4 py-2 sm:py-3 text-amber-950 text-3xl sm:text-4xl font-black italic text-center outline-hidden focus:border-amber-500 transition-colors"
+                                  className="w-full bg-amber-50 border-2 border-amber-200 rounded-2xl px-4 py-2 sm:py-3 text-amber-950 text-3xl sm:text-4xl font-black text-center outline-hidden focus:border-amber-500 transition-colors"
                                   placeholder="0"
                                 />
                               </div>
@@ -723,7 +722,7 @@ export default function App() {
                               <div className="flex flex-col items-center gap-2 sm:gap-4 bg-amber-50 px-6 sm:px-8 py-3 sm:py-5 rounded-3xl border border-amber-100 shadow-sm min-w-[200px] sm:min-w-[300px] shrink-0">
                                 <div className="flex items-center gap-3">
                                   <div className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full animate-pulse ${essayTimeRemaining > 0 ? 'bg-amber-500' : 'bg-red-500'}`} />
-                                  <p className="text-amber-900 font-black text-[9px] sm:text-xs tracking-[0.4em] uppercase italic">
+                                  <p className="text-amber-900 font-black text-[9px] sm:text-xs tracking-[0.4em] uppercase">
                                     THỜI GIAN CHUẨN BỊ
                                   </p>
                                 </div>
@@ -761,7 +760,7 @@ export default function App() {
                           />
                         ))}
                       </div>
-                      <span className="text-amber-900/30 text-sm font-black tracking-widest uppercase italic ml-4">
+                      <span className="text-amber-900/30 text-sm font-black tracking-widest uppercase ml-4">
                         Hội thi lần thứ II • Học tập và làm theo Bác
                       </span>
                     </div>
@@ -769,7 +768,7 @@ export default function App() {
                     {quizStep === 'essay' ? (
                       <button
                         onClick={nextQuestion}
-                        className="px-16 py-7 rounded-[2rem] font-black text-3xl italic tracking-tighter flex items-center gap-6 transition-all shadow-2xl relative overflow-hidden group bg-red-600 text-white hover:bg-red-700 active:scale-95 shadow-red-900/30"
+                        className="px-16 py-7 rounded-[2rem] font-black text-3xl tracking-tighter flex items-center gap-6 transition-all shadow-2xl relative overflow-hidden group bg-red-600 text-white hover:bg-red-700 active:scale-95 shadow-red-900/30"
                       >
                         <span className="relative z-10 uppercase font-black">
                           KẾT THÚC
@@ -786,7 +785,7 @@ export default function App() {
                       <button
                         onClick={nextQuestion}
                         disabled={quizStep === 'quiz' && selectedAnswer === null}
-                        className={`px-16 py-7 rounded-[2rem] font-black text-3xl italic tracking-tighter flex items-center gap-6 transition-all shadow-2xl relative overflow-hidden group ${quizStep === 'quiz' && selectedAnswer === null
+                        className={`px-16 py-7 rounded-[2rem] font-black text-3xl tracking-tighter flex items-center gap-6 transition-all shadow-2xl relative overflow-hidden group ${quizStep === 'quiz' && selectedAnswer === null
                           ? 'bg-gray-100 text-gray-300 cursor-not-allowed border border-gray-200 opacity-50'
                           : 'bg-amber-950 text-amber-400 hover:bg-black active:scale-95 shadow-amber-900/30'
                           }`}
@@ -856,7 +855,7 @@ export default function App() {
             className="flex flex-col items-center"
           >
             <div className="mb-6 bg-amber-500/5 border border-amber-500/20 px-8 py-2 rounded-full backdrop-blur-xl">
-              <span className="text-amber-300/60 font-black text-[30px] tracking-[0.6em] uppercase">Đảng Ủy Trường Đại Học</span>
+              <span className="text-amber-300 font-black text-[45px] tracking-[0.2em] uppercase">Đảng ủy trường đại học Tây Đô</span>
             </div>
 
             <h1 className="flex flex-col items-center">
@@ -871,20 +870,20 @@ export default function App() {
 
             <div className="mt-12 relative flex flex-col items-center gap-8">
               <div className="bg-linear-to-r from-red-950/80 via-red-900/80 to-red-950/80 px-14 py-6 rounded-[2rem] shadow-[0_40px_80px_rgba(0,0,0,0.9)] border border-amber-500/20 group relative overflow-hidden transition-all hover:border-amber-500/40">
-                <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/5 to-transparent animate-shine -skew-x-12" />
-                <span className="text-2xl md:text-3xl font-black text-white/90 italic drop-shadow-md block mb-3 tracking-normal">
+                <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/5 to-transparent animate-shine" />
+                <span className="text-2xl md:text-3xl font-black text-white/90 drop-shadow-md block mb-3 tracking-normal">
                   Học tập và làm theo tư tưởng, đạo đức, phong cách Hồ Chí Minh
                 </span>
                 <div className="flex items-center justify-center gap-6">
                   <div className="h-px flex-1 bg-amber-500/20" />
-                  <span className="text-xs font-black text-amber-500/80 text-[20px] tracking-[0.5em] uppercase">
+                  <span className="text-xs font-black text-amber-500/80 text-[35px] tracking-[0.3em] uppercase">
                     LẦN THỨ II — NĂM 2026
                   </span>
                   <div className="h-px flex-1 bg-amber-500/20" />
                 </div>
               </div>
 
-              {/* <div className="flex items-center gap-8 text-amber-600/40 font-black text-[10px] tracking-[0.4em] uppercase italic">
+              {/* <div className="flex items-center gap-8 text-amber-600/40 font-black text-[10px] tracking-[0.4em] uppercase">
                 <span>BẢN LĨNH</span>
                 <div className="w-1.5 h-1.5 rounded-full bg-amber-500/20" />
                 <span>TRÍ TUỆ</span>
@@ -904,10 +903,9 @@ export default function App() {
               className="group relative"
             >
               <div className="absolute -inset-10 bg-amber-500 rounded-full blur-3xl opacity-5 group-hover:opacity-15 transition-all duration-1000" />
-              <div className="relative bg-linear-to-b from-amber-200 via-amber-500 to-amber-800 px-32 py-8 rounded-full border border-white/20 shadow-[0_30px_60px_rgba(0,0,0,0.8)] flex flex-col items-center min-w-[450px] transition-all group-hover:shadow-amber-500/10">
-                <span className="text-5xl font-black text-amber-950 tracking-tighter uppercase italic drop-shadow-md">BẮT ĐẦU THI</span>
+              <div className="relative bg-linear-to-b from-amber-200 via-amber-500 to-amber-800 px-32 py-14 rounded-full border border-white/20 shadow-[0_30px_60px_rgba(0,0,0,0.8)] flex flex-col items-center min-w-[450px] transition-all group-hover:shadow-amber-500/10">
+                <span className="text-5xl font-black text-amber-950 tracking-tighter uppercase drop-shadow-md">BẮT ĐẦU THI</span>
                 <div className="mt-2 w-[80%] h-px bg-amber-950/10" />
-                <span className="text-[12px] font-black text-amber-950/40 tracking-[0.7em] uppercase mt-1.5">Tiếp bước cha ông</span>
               </div>
             </motion.button>
           </div>
@@ -917,7 +915,7 @@ export default function App() {
       {/* Global Footer */}
       <footer className="absolute bottom-0 left-0 w-full z-50 px-8 py-3 bg-black/60 backdrop-blur-3xl border-t border-white/5 flex items-center justify-between">
         <div className="flex items-center gap-10">
-          <div className="flex items-center gap-6 font-black text-[10px] tracking-widest text-yellow-500/60 uppercase italic">
+          <div className="flex items-center gap-6 font-black text-[10px] tracking-widest text-yellow-500/60 uppercase">
             <span>{formatTime(time)}</span>
             <div className="w-1 h-1 rounded-full bg-white/10" />
             <span>{formatDate(time)}</span>
@@ -972,7 +970,7 @@ export default function App() {
             className="fixed inset-0 z-[200] flex items-center justify-center bg-black/95 backdrop-blur-xl p-10"
           >
             <div className="max-w-4xl w-full">
-              <h2 className="text-4xl font-black gold-text mb-12 text-center tracking-[0.2em] italic uppercase">Danh sách Thành viên tham gia</h2>
+              <h2 className="text-4xl font-black gold-text mb-12 text-center tracking-[0.2em] uppercase">Danh sách Thành viên tham gia</h2>
               <div className="grid grid-cols-3 gap-6">
                 {teams.map((team, idx) => (
                   <motion.button
@@ -985,7 +983,7 @@ export default function App() {
                     }}
                     className={`p-10 rounded-[2rem] border-2 transition-all text-center ${selectedTeam === team ? 'bg-emerald-600/40 border-emerald-400 shadow-[0_0_40px_rgba(34,197,94,0.3)]' : 'bg-white/5 border-white/10 hover:border-amber-400/50 hover:bg-white/10'}`}
                   >
-                    <span className={`text-2xl font-black italic tracking-widest ${selectedTeam === team ? 'text-white' : 'text-white/60'}`}>{team}</span>
+                    <span className={`text-2xl font-black tracking-widest ${selectedTeam === team ? 'text-white' : 'text-white/60'}`}>{team}</span>
                   </motion.button>
                 ))}
               </div>
@@ -1008,7 +1006,7 @@ export default function App() {
               initial={{ scale: 0.9, y: 20 }} animate={{ scale: 1, y: 0 }} exit={{ scale: 0.9, y: 20 }}
               className="max-w-md w-full glass-panel p-10 rounded-[3rem] border-amber-500/30"
             >
-              <h3 className="text-3xl font-black text-amber-500 mb-8 italic uppercase tracking-tighter text-center">Chấm điểm Hùng biện</h3>
+              <h3 className="text-3xl font-black text-amber-500 mb-8 uppercase tracking-tighter text-center">Chấm điểm Hùng biện</h3>
 
               <div className="space-y-6">
                 <div>
@@ -1030,7 +1028,7 @@ export default function App() {
                     type="number"
                     value={essayScoreInput}
                     onChange={(e) => setEssayScoreInput(e.target.value)}
-                    className="w-full bg-white/5 border-2 border-white/10 rounded-2xl px-6 py-4 text-white text-3xl font-black italic outline-hidden focus:border-amber-500 transition-colors"
+                    className="w-full bg-white/5 border-2 border-white/10 rounded-2xl px-6 py-4 text-white text-3xl font-black outline-hidden focus:border-amber-500 transition-colors"
                     placeholder="0"
                   />
                 </div>
@@ -1076,7 +1074,7 @@ export default function App() {
                 className="text-center mb-60 relative z-50 pt-20"
               >
                 <div className="inline-block px-10 py-3 bg-amber-500/10 border border-amber-500/20 rounded-full mb-4">
-                  <span className="text-amber-500 font-black text-xs tracking-[0.5em] uppercase italic">LỄ TỔNG KẾT & TRAO GIẢI</span>
+                  <span className="text-amber-500 font-black text-xs tracking-[0.5em] uppercase">LỄ TỔNG KẾT & TRAO GIẢI</span>
                 </div>
                 <h2 className="modern-title text-7xl md:text-8xl drop-shadow-[0_20px_50px_rgba(245,158,11,0.3)]">VINH DANH</h2>
               </motion.div>
@@ -1146,12 +1144,12 @@ export default function App() {
                           >
                             <Trophy size={is1st ? 56 : 32} className={i === 0 ? 'text-slate-200' : is1st ? 'text-amber-400' : 'text-orange-400'} />
                           </motion.div>
-                          <h4 className={`font-black italic tracking-tighter text-white mb-2 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] leading-none ${is1st ? 'text-4xl md:text-6xl uppercase' : 'text-2xl md:text-3xl'}`}>
+                          <h4 className={`font-black tracking-tighter text-white mb-2 drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)] leading-none ${is1st ? 'text-4xl md:text-6xl uppercase' : 'text-2xl md:text-3xl'}`}>
                             {team[0]}
                           </h4>
                           <div className="flex flex-col items-center">
-                            <span className={`font-black text-amber-500 italic drop-shadow-lg ${is1st ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'}`}>{team[1].points} ĐIỂM</span>
-                            <span className="text-[10px] font-bold text-white/40 italic uppercase mt-1 tracking-widest bg-black/40 px-3 py-1 rounded-full border border-white/10">THỜI GIAN: {team[1].time}s</span>
+                            <span className={`font-black text-amber-500 drop-shadow-lg ${is1st ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'}`}>{team[1].points} ĐIỂM</span>
+                            <span className="text-[10px] font-bold text-white/40 uppercase mt-1 tracking-widest bg-black/40 px-3 py-1 rounded-full border border-white/10">THỜI GIAN: {team[1].time}s</span>
                           </div>
                         </div>
 
@@ -1160,10 +1158,10 @@ export default function App() {
                           <div className="absolute inset-x-0 top-0 h-6 bg-white/30" />
                           <div className="absolute inset-0 bg-linear-to-b from-white/30 via-transparent to-black/40" />
                           <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                            <span className="text-[10rem] md:text-[14rem] font-black text-black/10 italic -rotate-12 translate-y-12">{i === 1 ? '1' : i === 0 ? '2' : '3'}</span>
+                            <span className="text-[10rem] md:text-[14rem] font-black text-black/10 translate-y-12">{i === 1 ? '1' : i === 0 ? '2' : '3'}</span>
                           </div>
                           <div className="absolute bottom-10 inset-x-0 text-center">
-                            <span className="text-black font-black text-xl md:text-2xl tracking-[0.5em] italic drop-shadow-[0_2px_4px_rgba(255,255,255,0.4)]">{podiumLabels[i]}</span>
+                            <span className="text-black font-black text-xl md:text-2xl tracking-[0.5em] drop-shadow-[0_2px_4px_rgba(255,255,255,0.4)]">{podiumLabels[i]}</span>
                           </div>
                         </div>
                       </motion.div>
@@ -1176,7 +1174,7 @@ export default function App() {
               <div className="mt-20 w-full px-20">
                 <div className="flex items-center gap-6 mb-12">
                   <div className="h-px flex-1 bg-white/5" />
-                  <span className="text-[10px] font-black text-white/30 tracking-[0.5em] uppercase italic">GIẢI KHUYẾN KHÍCH</span>
+                  <span className="text-[10px] font-black text-white/30 tracking-[0.5em] uppercase">GIẢI KHUYẾN KHÍCH</span>
                   <div className="h-px flex-1 bg-white/5" />
                 </div>
                 <div className="grid grid-cols-3 md:grid-cols-6 gap-4">
@@ -1198,8 +1196,8 @@ export default function App() {
                         <div className="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-slate-500 text-xs font-black mb-4 group-hover:scale-110 transition-transform">
                           🎗️
                         </div>
-                        <span className="text-white/60 font-black text-sm mb-1 italic truncate w-full">{team[0]}</span>
-                        <span className="text-amber-500/50 font-black text-xs italic">{team[1].points} đ</span>
+                        <span className="text-white/60 font-black text-sm mb-1 truncate w-full">{team[0]}</span>
+                        <span className="text-amber-500/50 font-black text-xs">{team[1].points} đ</span>
                       </motion.div>
                     ));
                   })()}
@@ -1364,7 +1362,7 @@ function ConfigModal({
               <Settings size={28} />
             </div>
             <div>
-              <h2 className="text-3xl font-black italic tracking-tighter text-white uppercase leading-none">Cấu hình Hệ thống</h2>
+              <h2 className="text-3xl font-black tracking-tighter text-white uppercase leading-none">Cấu hình Hệ thống</h2>
               <span className="text-[10px] font-black text-white/20 uppercase tracking-[0.4em] mt-2 block">Quản trị viên cuộc thi</span>
             </div>
           </div>
@@ -1383,7 +1381,7 @@ function ConfigModal({
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`flex items-center gap-4 px-6 py-5 rounded-[1.5rem] font-black italic text-sm transition-all text-left uppercase tracking-widest ${activeTab === tab.id ? 'bg-amber-500 text-black shadow-2xl shadow-amber-500/20 scale-[1.02]' : 'text-white/20 hover:bg-white/5 hover:text-white'}`}
+                className={`flex items-center gap-4 px-6 py-5 rounded-[1.5rem] font-black text-sm transition-all text-left uppercase tracking-widest ${activeTab === tab.id ? 'bg-amber-500 text-black shadow-2xl shadow-amber-500/20 scale-[1.02]' : 'text-white/20 hover:bg-white/5 hover:text-white'}`}
               >
                 {tab.icon}
                 {tab.label}
@@ -1417,7 +1415,7 @@ function ConfigModal({
               <div className="space-y-8 animate-in fade-in duration-500">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-2xl font-black italic text-amber-500 uppercase tracking-tighter">Quản lý Thành viên</h3>
+                    <h3 className="text-2xl font-black text-amber-500 uppercase tracking-tighter">Quản lý Thành viên</h3>
                     <p className="text-white/30 text-xs mt-1">Danh sách các đơn vị tham gia hội thi ({teams.length})</p>
                   </div>
                   {!isAddingTeam && (
@@ -1441,7 +1439,7 @@ function ConfigModal({
                   >
                     <div className="flex items-center gap-4 mb-2">
                       <div className="p-3 bg-amber-500 rounded-2xl text-black"><Users size={24} /></div>
-                      <h4 className="text-xl font-black text-white italic uppercase tracking-widest">Thêm Thành Viên Mới</h4>
+                      <h4 className="text-xl font-black text-white uppercase tracking-widest">Thêm Thành Viên Mới</h4>
                     </div>
                     <div className="space-y-2">
                       <label className="text-[10px] font-black text-amber-500/60 uppercase tracking-[0.4em] ml-2">Tên Đơn vị / Thành viên:</label>
@@ -1483,7 +1481,7 @@ function ConfigModal({
                   {teams.map((team, idx) => (
                     <div key={idx} className="bg-white/5 p-6 rounded-[2rem] flex items-center justify-between group border border-white/5 hover:border-amber-500/30 hover:bg-white/10 transition-all">
                       <div className="flex items-center gap-4 flex-1">
-                        <span className="text-[10px] font-black text-white/20 italic">{idx + 1}</span>
+                        <span className="text-[10px] font-black text-white/20">{idx + 1}</span>
                         {editingTeamIdx === idx ? (
                           <input
                             autoFocus
@@ -1509,7 +1507,7 @@ function ConfigModal({
                             className="bg-black/40 border border-amber-500 text-white px-3 py-1 rounded-lg font-bold outline-hidden w-full max-w-[200px]"
                           />
                         ) : (
-                          <span className="font-black italic text-white/80 group-hover:text-amber-500 transition-colors uppercase tracking-widest text-sm">{team}</span>
+                          <span className="font-black text-white/80 group-hover:text-amber-500 transition-colors uppercase tracking-widest text-sm">{team}</span>
                         )}
                       </div>
                       <div className="flex gap-2">
@@ -1576,7 +1574,7 @@ function ConfigModal({
               <div className="space-y-8 animate-in fade-in duration-500">
                 <div className="flex items-center justify-between">
                   <div>
-                    <h3 className="text-2xl font-black italic text-amber-500 uppercase tracking-tighter">Quản lý Bông hoa</h3>
+                    <h3 className="text-2xl font-black text-amber-500 uppercase tracking-tighter">Quản lý Bông hoa</h3>
                     <p className="text-white/30 text-xs mt-1">Các bông hoa trên cây hái hoa ({flowers.length})</p>
                   </div>
                   {!isAddingFlower && (
@@ -1608,7 +1606,7 @@ function ConfigModal({
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-3">
                         <div className="p-2 bg-amber-500 rounded-xl text-black"><PlusCircle size={20} /></div>
-                        <h4 className="text-lg font-black text-white italic uppercase tracking-widest">Thêm Bông Hoa Mới</h4>
+                        <h4 className="text-lg font-black text-white uppercase tracking-widest">Thêm Bông Hoa Mới</h4>
                       </div>
                       <button
                         onClick={() => setIsAddingFlower(false)}
@@ -1783,7 +1781,7 @@ function ConfigModal({
                           setActiveTab('questions');
                         }}>
                           <div className="flex items-center gap-3 mb-1">
-                            <h4 className="text-xl font-black text-white italic uppercase tracking-widest">{flower.name}</h4>
+                            <h4 className="text-xl font-black text-white uppercase tracking-widest">{flower.name}</h4>
                             <span className="text-[10px] font-black text-amber-500/40 uppercase tracking-widest px-2 py-0.5 border border-amber-500/20 rounded-full">ID: {flower.id}</span>
                           </div>
                           <div className="flex gap-4">
@@ -1946,7 +1944,7 @@ function ConfigModal({
             {activeTab === 'questions' && (
               <div className="space-y-8 animate-in fade-in duration-500">
                 <div>
-                  <h3 className="text-2xl font-black italic text-amber-500 uppercase tracking-tighter">Ngân hàng Câu hỏi</h3>
+                  <h3 className="text-2xl font-black text-amber-500 uppercase tracking-tighter">Ngân hàng Câu hỏi</h3>
                   <p className="text-white/30 text-xs mt-1">Thiết lập câu hỏi Trắc nghiệm và Tự luận cho từng bông hoa</p>
                 </div>
 
@@ -1957,7 +1955,7 @@ function ConfigModal({
                       <button
                         key={f.id}
                         onClick={() => setSelectedFlowerId(f.id)}
-                        className={`flex items-center gap-3 px-4 py-2 rounded-2xl font-black italic text-xs transition-all uppercase tracking-widest border ${selectedFlowerId === f.id ? 'bg-amber-500 text-black border-amber-400 shadow-xl shadow-amber-500/20' : 'bg-white/5 text-white/40 border-white/5 hover:bg-white/10'}`}
+                        className={`flex items-center gap-3 px-4 py-2 rounded-2xl font-black text-xs transition-all uppercase tracking-widest border ${selectedFlowerId === f.id ? 'bg-amber-500 text-black border-amber-400 shadow-xl shadow-amber-500/20' : 'bg-white/5 text-white/40 border-white/5 hover:bg-white/10'}`}
                       >
                         <FlowerIconDisplay icon={f.icon} size="sm" className="rounded-lg shadow-sm" />
                         <span>{f.name}</span>
@@ -1972,7 +1970,7 @@ function ConfigModal({
                       <div className="flex items-center justify-between mb-8">
                         <div className="flex items-center gap-3">
                           <FileText className="text-amber-500" size={24} />
-                          <h4 className="text-lg font-black text-amber-500 uppercase tracking-[0.3em] italic">Chủ đề Hùng biện ({questionsDb[selectedFlowerId].essays.length})</h4>
+                          <h4 className="text-lg font-black text-amber-500 uppercase tracking-[0.3em]">Chủ đề Hùng biện ({questionsDb[selectedFlowerId].essays.length})</h4>
                         </div>
                         <button
                           onClick={() => {
@@ -2033,7 +2031,7 @@ function ConfigModal({
                                   };
                                 });
                               }}
-                              className="w-full bg-black/40 border-2 border-white/5 rounded-[2rem] p-8 text-white text-xl font-black italic outline-hidden focus:border-amber-500 min-h-[120px] shadow-inner transition-all focus:bg-black/60 pr-16"
+                              className="w-full bg-black/40 border-2 border-white/5 rounded-[2rem] p-8 text-white text-xl font-black outline-hidden focus:border-amber-500 min-h-[120px] shadow-inner transition-all focus:bg-black/60 pr-16"
                               placeholder={`Nội dung câu hỏi hùng biện ${eIdx + 1}...`}
                             />
                             {questionsDb[selectedFlowerId].essays.length > 1 && (
@@ -2053,7 +2051,7 @@ function ConfigModal({
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-3">
                           <div className="p-2 bg-amber-500/20 rounded-xl text-amber-500"><Settings size={18} /></div>
-                          <h4 className="text-lg font-black text-amber-500 uppercase tracking-[0.3em] italic">Bộ câu hỏi trắc nghiệm ({questionsDb[selectedFlowerId].mcqs.length})</h4>
+                          <h4 className="text-lg font-black text-amber-500 uppercase tracking-[0.3em]">Bộ câu hỏi trắc nghiệm ({questionsDb[selectedFlowerId].mcqs.length})</h4>
                         </div>
                         <button
                           onClick={() => {
@@ -2110,7 +2108,7 @@ function ConfigModal({
                             <Trash2 size={24} />
                           </button>
                           <div className="flex items-start gap-6">
-                            <span className="w-12 h-12 min-w-[3rem] rounded-2xl bg-amber-500 text-black flex items-center justify-center font-black italic text-xl shadow-xl shadow-amber-500/20">0{qIdx + 1}</span>
+                            <span className="w-12 h-12 min-w-[3rem] rounded-2xl bg-amber-500 text-black flex items-center justify-center font-black text-xl shadow-xl shadow-amber-500/20">0{qIdx + 1}</span>
                             <textarea
                               value={q.q}
                               onChange={(e) => {
@@ -2126,7 +2124,7 @@ function ConfigModal({
                                   };
                                 });
                               }}
-                              className="flex-1 bg-transparent border-b-2 border-white/5 py-2 text-white font-black text-2xl italic outline-hidden focus:border-amber-500 transition-all min-h-[80px]"
+                              className="flex-1 bg-transparent border-b-2 border-white/5 py-2 text-white font-black text-2xl outline-hidden focus:border-amber-500 transition-all min-h-[80px]"
                               placeholder="Nội dung câu hỏi..."
                             />
                           </div>
@@ -2186,7 +2184,7 @@ function ConfigModal({
                       <FileText size={48} />
                     </div>
                     <div className="text-center">
-                      <h4 className="text-2xl font-black text-white italic uppercase tracking-widest mb-2">Chưa có bộ câu hỏi</h4>
+                      <h4 className="text-2xl font-black text-white uppercase tracking-widest mb-2">Chưa có bộ câu hỏi</h4>
                       <p className="text-white/30 text-xs uppercase tracking-widest font-black">Bông hoa này chưa được thiết lập ngân hàng câu hỏi</p>
                     </div>
                     <button
@@ -2219,7 +2217,7 @@ function ConfigModal({
                     <Download size={48} />
                   </div>
                   <div>
-                    <h4 className="text-3xl font-black text-white italic uppercase tracking-tighter mb-3">Xuất dữ liệu</h4>
+                    <h4 className="text-3xl font-black text-white uppercase tracking-tighter mb-3">Xuất dữ liệu</h4>
                     <p className="text-white/30 text-xs px-10 leading-relaxed uppercase tracking-widest font-black">Lưu trữ cấu hình cuộc thi (JSON) về thiết bị cá nhân</p>
                   </div>
                   <button onClick={exportData} className="w-full py-6 rounded-3xl bg-blue-600 text-white font-black uppercase text-xs tracking-[0.3em] hover:bg-blue-500 transition-all shadow-2xl shadow-blue-950">DOWNLOAD JSON</button>
@@ -2230,7 +2228,7 @@ function ConfigModal({
                     <Upload size={48} />
                   </div>
                   <div>
-                    <h4 className="text-3xl font-black text-white italic uppercase tracking-tighter mb-3">Nhập dữ liệu</h4>
+                    <h4 className="text-3xl font-black text-white uppercase tracking-tighter mb-3">Nhập dữ liệu</h4>
                     <p className="text-white/30 text-xs px-10 leading-relaxed uppercase tracking-widest font-black">Khôi phục cấu hình từ file JSON đã có </p>
                   </div>
                   <label className="w-full py-6 rounded-3xl bg-emerald-600 text-white font-black uppercase text-xs tracking-[0.3em] hover:bg-emerald-500 transition-all cursor-pointer shadow-2xl shadow-emerald-950 text-center">
@@ -2244,7 +2242,7 @@ function ConfigModal({
                     <RotateCcw size={48} />
                   </div>
                   <div>
-                    <h4 className="text-3xl font-black text-red-500 italic uppercase tracking-tighter mb-3">Xóa dữ liệu thi</h4>
+                    <h4 className="text-3xl font-black text-red-500 uppercase tracking-tighter mb-3">Xóa dữ liệu thi</h4>
                     <p className="text-white/30 text-xs px-20 leading-relaxed uppercase tracking-widest font-black">Hành động này sẽ xóa toàn bộ điểm số và reset trạng thái hoa. <br /> dữ liệu câu hỏi và thành viên sẽ được giữ lại.</p>
                   </div>
                   <button onClick={resetAll} className="px-20 py-6 rounded-3xl bg-red-600 text-white font-black uppercase text-xs tracking-[0.3em] hover:bg-red-500 transition-all shadow-2xl shadow-red-950">XÁC NHẬN RESET</button>
