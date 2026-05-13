@@ -876,7 +876,7 @@ export default function App() {
                 </span>
                 <div className="flex items-center justify-center gap-6">
                   <div className="h-px flex-1 bg-amber-500/20" />
-                  <span className="text-xs font-black text-amber-500/80 text-[35px] tracking-[0.3em] uppercase">
+                  <span className="text-xs font-black text-amber-500/80 text-[20px] tracking-[0.3em] uppercase">
                     LẦN THỨ II — NĂM 2026
                   </span>
                   <div className="h-px flex-1 bg-amber-500/20" />
