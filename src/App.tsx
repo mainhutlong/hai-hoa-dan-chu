@@ -884,13 +884,13 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-8 text-amber-600/40 font-black text-[10px] tracking-[0.4em] uppercase italic">
+              {/* <div className="flex items-center gap-8 text-amber-600/40 font-black text-[10px] tracking-[0.4em] uppercase italic">
                 <span>BẢN LĨNH</span>
                 <div className="w-1.5 h-1.5 rounded-full bg-amber-500/20" />
                 <span>TRÍ TUỆ</span>
                 <div className="w-1.5 h-1.5 rounded-full bg-amber-500/20" />
                 <span>TÂM HUYẾT</span>
-              </div>
+              </div> */}
             </div>
           </motion.div>
 
